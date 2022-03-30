@@ -3,17 +3,16 @@
  # @ Create Time: 2022-03-28 23:24:49
  # @ Modified by: Juan Navarro
  # @ Modified time: 2022-03-28 23:24:53
- # @ Description:
+ # @ Description: heroku app name bigmacjpnr
  '''
 import pandas as pd
 import plotly.express as px  
-import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 from dash import Dash, dcc, html, Input, Output  
 
 
 app = Dash(__name__)
-
+server = app.server
 
 url = 'https://raw.githubusercontent.com/TheEconomist/big-mac-data/master/output-data/big-mac-full-index.csv'
 data = pd.read_csv(url, index_col=1)
